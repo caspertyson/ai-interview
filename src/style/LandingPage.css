@@ -1,0 +1,98 @@
+body{
+    background-color: #F4F4F4;
+}
+#navbar{
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+#theLetterI{
+    font-size: 28px;
+    background-color: #DE6B80;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin: 15px;
+    color: white;
+    font-weight: 600;
+}
+#appName{
+    font-size: 28px;
+    margin: 15px;
+    color: grey;
+    font-weight: 400;
+    cursor: pointer;
+}
+#landingPageContainer h1{
+    text-align: center;
+    font-size: 80px;
+    width: 80%;
+    margin: auto;
+    font-weight: 500;
+    color: grey;
+    margin-top: 100px;
+    max-width: 850px;
+}
+#landingPageContainer p{
+    width: 40%;
+    font-size: 24px;
+    color: grey;
+    margin: auto;
+    margin-top: 30px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 300;
+}
+#landingPageContainer{
+    text-align: center;
+}
+#landingPageContainer button{
+    width: 400px;
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    background-color: #DE6B80;
+    color: white;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 40px;
+    cursor: pointer;
+    /* margin-bottom: 100px; */
+}
+#landingPageContainer button:hover{
+    background-color: #ba5366;
+}
+#direct{
+    color: #DE6B80;
+}
+#interviewer{
+    color: #43B7F9;
+}
+@media screen and (max-width: 600px) {
+    #landingPageContainer h1{
+        font-size: 45px;
+        text-align: left;
+        width: 90%;
+    }
+    #landingPageContainer{
+    }
+    #landingPageContainer p{
+        font-size: larger;
+        text-align: left;
+        width: 90%;
+        line-height: 30px;
+    }
+    #landingPageContainer button{
+        width: 200px;
+        height: 50px;
+    }
+    #appName{
+        margin-left: 0px;
+        font-size: 24px;
+    }
+    #theLetterI{
+        font-size: 24px;
+        height: 30px;
+        width: 30px;
+    }
+}

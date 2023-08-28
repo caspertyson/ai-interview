@@ -16,15 +16,18 @@ body{
     /* overflow: hidden; Add this line */
     margin: 0px;
     padding: 0px;
+    position: relative; /* Added */
 
   }
   
   .chat-box {
     width: 100%;
     max-width: 600px;
-    height: 95%;
+    height: 95vh;
     background-color: rgb(238, 238, 238);
     /* height: calc(100vh - 22px); Adjust the height to fit within the view height */
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
   }
   
   .message {
@@ -36,8 +39,11 @@ body{
   .messages {
     display: flex;
     flex-direction: column;
-    height: calc(100% - 40px);
+    height: calc(100% - 60px);
     /* overflow-y: auto; */
+    flex: 1; /* Added to make it fill all available space */
+    overflow-y: auto; /* Added to make it scrollable */
+    margin-bottom: 62px;
   }
   
   .user-message {
@@ -61,19 +67,27 @@ body{
   }
     
   .footer {
-    height: 50px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    background-color: rgb(227, 227, 227);
+    z-index: 9;
+    position: absolute; /* Added */
+    max-width: 560px; /* Added to make it full-width */
+    bottom: 0; /* Added */
+    width: 90%;
+
   }
   
   #messageInput {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     margin-right: 20px;
     font-size: large;
     background-color: rgb(255, 255, 255);
@@ -88,7 +102,7 @@ body{
     font-size: large;
     text-align: center;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 90px;
     cursor: pointer;
   }

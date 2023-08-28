@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "../style/Chat.css"
+import "../style/Chat1.css"
 import { async } from 'q';
+import Send from "../send.png"
 
 const App = () => {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([{ role: 'assistant', content: "hellldfiohf goidfjg oidf jgio dfgj doig djf iog dfj gi dofig jdfiogjdf gi idf giod fgjd fiog dfj goi doig odij goi jdfog iod gjdio gjodf gjoidf gnldngld fgdm gljdf gjldf glj dlfjg dfjl gljdf gjldf gjld o" },{ role: 'user', content: "hellj oih sidoh osid fhids hfis oh sdihf siod fois dfhis dfh sihf is fhis fhsd ifh is fisdihf sihfi sdh hi aanskdfnksdf s fns fndf gn dfng ndf gndfg nd gnd gasdasd as da sd aso" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" },{ role: 'assistant', content: "hello" }]);
+  // const [messages, setMessages] = useState([])
   const [message, setMessage] = useState('');
   const [job, setJob] = useState("")
   const [isModalOpen, setModalOpen] = useState(true);
@@ -74,32 +76,31 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    
-    const setBodyHeight = () => {
-      const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-      document.querySelector('.containerChatBox').style.height = `${vh}px`;
-    };
+  // useEffect(() => {
+  //   const setBodyHeight = () => {
+  //     const vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  //     document.querySelector('.containerChatBox').style.height = `${vh}px`;
+  //   };
+
+  //   setBodyHeight();
+  //   window.addEventListener('resize', setBodyHeight);
   
-    setBodyHeight();
-    window.addEventListener('resize', setBodyHeight);
-  
-    return () => {
-      window.removeEventListener('resize', setBodyHeight);
-    };
-  }, []);
-    
+  //   return () => {
+  //     window.removeEventListener('resize', setBodyHeight);
+  //   };
+  // }, []);
+
   return (
     <div className="containerChatBox">
 
       {isModalOpen && (
         <div id="modal">
           <div className="modal-content">
-            <h2>Choose your job</h2>
-            <p>Beware, it can be brutal.</p>
+            <h2>Choose Your <span id='modalJob'>Job</span></h2>
+            <p>Be as specific as you'd like.</p>
             <input
               type="text"
-              placeholder="Job you're applying for..."
+              placeholder="Enter Job..."
               value={job}
               onChange={(e) => setJob(e.target.value)}
             />
@@ -117,13 +118,13 @@ const App = () => {
           ))}
         </div>
         <div className="footer">
-          <input id="messageInput" 
+          <input className="compose-input" 
           type="text" 
-          placeholder="Type a message" 
+          placeholder="Send a message..." 
           value={message} 
           onChange={(e) => setMessage(e.target.value)} 
           onKeyPress={handleKeyPress}/>
-          <button onClick={handleSend}>Send</button>
+          <button id='sendButton' onClick={handleSend}><img id='sendIcon' src={Send}></img></button>
         </div>
       </div>
     </div>
