@@ -1,0 +1,167 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.App{
+    margin: 0px;
+    padding: 0px;
+}
+.containerChatBox {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; Add this line */
+    margin: 0px;
+    padding: 0px;
+
+  }
+  
+  .chat-box {
+    width: 100%;
+    max-width: 600px;
+    height: 95%;
+    background-color: rgb(238, 238, 238);
+    /* height: calc(100vh - 22px); Adjust the height to fit within the view height */
+  }
+  
+  .message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  .messages {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    /* overflow-y: auto; */
+  }
+  
+  .user-message {
+    background-color: blue;
+    color: white;
+    align-self: flex-end;
+    padding: 15px;
+    margin: 5px;
+    margin-left: 100px;
+    border-radius: 20px;
+  }
+  
+  .bot-message {
+    background-color: gray;
+    color: white;
+    align-self: flex-start;
+    padding: 10px;
+    padding: 15px;
+    margin-right: 100px;
+    border-radius: 20px;
+  }
+    
+  .footer {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  #messageInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: large;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    font-size: large;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    width: 90px;
+    cursor: pointer;
+  }
+  #job{
+    display: inline-block;
+    width: 200px;
+  }
+  #modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: large;
+  }
+  
+  .modal-content button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+  }
+  
+  .modal-content button:hover {
+    background-color: #0056b3;
+  }
+  h2{
+    margin: 0px;
+  }
+  #dontshow{
+    display: none;
+  }
+  @media screen and (max-width: 408px) {
+    .footer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .chat-box {
+    }
+    .containerChatBox {
+        overflow: auto;
+    }
+    .messages {
+        overflow: auto;
+    }
+    .input{
+        
+    }
+}
+  
