@@ -24,7 +24,7 @@ const App = () => {
   const setupChat = async () => {
     if (messages.length === 0) { // Changed from `messages === ''` to check the array length
       try {
-        const response = await fetch('http://192.168.1.66:8000/completions', {
+        const response = await fetch('http://wesmo.co.nz/api/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const App = () => {
     setMessage('');
     console.log(newMessages)
     try {
-        const response = await fetch('http://192.168.1.66:8000/completions', {
+        const response = await fetch('http://wesmo.co.nz/api/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
