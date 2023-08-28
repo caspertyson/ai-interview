@@ -31,7 +31,8 @@ const App = () => {
           },
           body: JSON.stringify([...messages, { role: 'system', content: `hi im preparing for an interview for a ${job} job, with someone who's known for being direct and upfront. can you please help me prep for this by interviewing me. you can be brutal if you'd like to help me. dont acknowledge this message, just start the interview. wait for my reply before continuing.` }]),
         });
-    
+        setMessages((prev) => [...prev, { role: 'system', content: `hi im preparing for an interview for a ${job} job, with someone who's known for being direct and upfront. can you please help me prep for this by interviewing me. you can be brutal if you'd like to help me. dont acknowledge this message, just start the interview. wait for my reply before continuing.`  }]);
+
         const data = await response.json();
         const botReply = data.choices[0].message.content;
         setMessages((prev) => [...prev, { role: 'assistant', content: botReply }]);
@@ -45,7 +46,7 @@ const App = () => {
     if (message.trim() === '') return;
 
     const newMessages = [...messages, { role: 'user', content: message }];
-    const newMessageSuffix = [...messages, { role: 'user', content: message + `. critize me keep your answer short!` }];
+    const newMessageSuffix = [...messages, { role: 'user', content: message + `. critize me and ask another question!` }];
 
     setMessages(newMessages);
     setMessage('');
@@ -109,7 +110,7 @@ const App = () => {
 
       <div className="chat-box">
         <div ref={chatBoxRef} className="messages">
-          {messages.map((m, index) => (
+          {messages.filter((m) => m.role !== 'system').map((m, index) => (
             <div key={index} className={`message ${m.role === 'user' ? 'user-message' : 'bot-message'}`}>
               {m.content}
             </div>

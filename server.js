@@ -5,6 +5,14 @@ const app = express()
 const dotenv = require('dotenv')
 dotenv.config()
 app.use(express.json())
+
+const corsOptions = {
+    origin: 'http://wesmo.co.nz', // replace with your application's origin
+    methods: 'POST',
+    credentials: true,
+    optionsSuccessStatus: 204,
+};
+  
 app.use(cors())
 
 app.post('/completions', async(req,res) => {
