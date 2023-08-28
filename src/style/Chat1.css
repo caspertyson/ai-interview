@@ -28,34 +28,40 @@ body{
     align-items: center;
     gap: 10px;
   }
+  .modal-content p{
+    font-weight: 300;
+    font-size: smaller;
+  }
   .modal-content h2{
     font-size: 32px;
     margin: 0px;
     padding: 0px;
+    font-weight: 300;
   }
   #modalJob{
     color: #DE6B80;
-    font-weight: 800;
+    font-weight: 600;
   }
   
   .modal-content input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 12px;
     border-radius: 10px;
     font-size: medium;
+    background-color: #dfdfdf;
+    border: none;
   }
   .modal-content input {
     outline: none;
   }
   .modal-content button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     background-color: #43B7F9;
     color: white;
     border-radius: 10px;
-    margin: 10px;
-    font-size: medium;
+    margin-top: 15px;
+    font-size: smaller;
     font-weight: 600;
     cursor: pointer;
     width: auto;
@@ -73,15 +79,15 @@ body{
     border-top: 1px solid #eeeef1;
     position: fixed;
     width: calc(70% - 50px);
-    bottom: 0px;
+    bottom: 0;  
     border-radius: 20px;
     margin: 10px;
 }
-#footerWrapper{
+/* #footerWrapper{
     background-color: rgb(220, 218, 218);
     width: 100%;
     height: 100px;
-}
+} */
 @supports (backdrop-filter: blur(20px)) {
     .compose {
       border: none;
@@ -161,6 +167,20 @@ body{
     background-color: transparent;
     cursor: pointer;
 }
+@keyframes typingDot {
+    0%, 100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+.bot-message.typing {
+    animation: typingDot 1s infinite;
+    color: grey;
+}
+  
 @media screen and (max-width: 600px) {
     .chat-box{
         width: 100%;
@@ -171,4 +191,7 @@ body{
     .modal-content {
         padding: 40px;
     }    
+    #landingPageContainer button{
+        min-width: 300px;
+    }
 }
