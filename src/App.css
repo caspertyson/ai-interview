@@ -1,6 +1,10 @@
 .App{
     padding: 0px;
     margin: 0px;
+    background-color: #F4F4F4;
+}
+html{
+    background-color: #F4F4F4;
 }
 /* Initial settings for both containers */
 .landing-page-container,
@@ -9,7 +13,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   transition: opacity 1s ease;
 }
 

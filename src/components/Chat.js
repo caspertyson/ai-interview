@@ -28,7 +28,7 @@ const App = () => {
     if (messages.length === 0) { // Changed from `messages === ''` to check the array length
       try {
         setIsTyping(true);
-        const response = await fetch('http://wesmo.co.nz/api/completions', {
+        const response = await fetch('https://wesmo.co.nz/api/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ const App = () => {
     setMessage('');
     console.log(newMessages)
     try {
-        const response = await fetch('http://wesmo.co.nz/api/completions', {
+        const response = await fetch('https://wesmo.co.nz/api/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
