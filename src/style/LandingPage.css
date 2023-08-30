@@ -30,10 +30,21 @@ body, html{
     margin: auto;
     font-weight: 500;
     color: grey;
-    margin-top: 100px;
+    margin-top: 10px;
     max-width: 850px;
 }
-#landingPageContainer p{
+#poweredByAI{
+    border-radius: 20px;
+    border: 1px solid grey;
+    color: grey;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    margin-top: 70px;
+}
+#landingPageP{
     width: 40%;
     font-size: 24px;
     color: grey;
@@ -61,6 +72,8 @@ body, html{
 }
 #landingPageContainer button:hover{
     background-color: #ba5366;
+    box-shadow: 3px 3px 5px 0px rgba(152, 151, 151, 0.75), -3px -3px 5px 0px rgba(255,255,255,0.75);
+
 }
 #direct{
     color: #DE6B80;
@@ -68,21 +81,130 @@ body, html{
 #interviewer{
     color: #43B7F9;
 }
-@media screen and (max-width: 600px) {
+#tilesContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 100px;
+    max-width: fit-content;
+}
+.tile{
+    width: 200px;
+    height: 230px;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 3px 3px 5px 0px rgba(152, 151, 151, 0.75);
+}
+.tile h2{
+    font-weight: 500;
+    color: #43B7F9;
+    font-size: larger;
+}
+.tile:hover{
+    background-color: rgb(235, 235, 235);
+}
+#tileP{
+    font-size: medium;
+    font-weight: 100;
+}
+.tileBorder{
+    padding: 20px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+#fullPage{
+    min-height: 100vh;
+} 
+.tileRow{
+    display: flex;
+    flex-direction: row;
+}
+.landingPageFooter{
+    background-color: white;
+    height: fit-content;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-weight: 200;
+    display: flex;
+    justify-content: space-between;
+}
+.landingPageFooter p{
+    cursor: pointer;
+  }
+.landingPageFooter h2{
+    font-weight: 600;
+
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    flex: 1;
+}
+.sub-section {
+    text-align: left;
+    padding: 30px;
+    /* border: 1px solid #ccc;  Optional, just for visualization */
+}
+#competitors a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 10px;
+}   
+#startInterview{
+    cursor: pointer;
+}
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+    .landingPageFooter {
+      flex-direction: column;
+    }
+  
+    .column {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+}
+  
+@media screen and (max-width: 1250px) {
+    .tileRow{
+        flex-direction: column;
+    }
+    #landingPageP{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 900px) {
+    #landingPageContainer h1{
+        font-size: 60px;
+    }
+}
+@media screen and (max-width: 750px) {
     #landingPageContainer h1{
         font-size: 45px;
         text-align: left;
         width: 90%;
+        line-height: 60px;
     }
     #landingPageContainer{
     }
-    #landingPageContainer p{
+    #landingPageP{
         font-size: larger;
         text-align: left;
         width: 90%;
         line-height: 30px;
     }
     #landingPageContainer button{
+        margin-top: 100px;
         width: 200px;
         height: 50px;
     }
@@ -94,5 +216,13 @@ body, html{
         font-size: 24px;
         height: 30px;
         width: 30px;
+    }
+    #poweredByAI{
+        margin-left: 25px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+    #tilesContainer{
+        flex-direction: column;
     }
 }
