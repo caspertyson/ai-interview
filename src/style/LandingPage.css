@@ -167,6 +167,8 @@ body, html{
 @media (max-width: 768px) {
     .landingPageFooter {
       flex-direction: column;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   
     .column {
