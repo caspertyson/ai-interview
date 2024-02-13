@@ -28,8 +28,10 @@ const App = () => {
     if (messages.length === 0) { // Changed from `messages === ''` to check the array length
       try {
         setIsTyping(true);
-        const response = await fetch('https://wesmo.co.nz/api/completions', {
+        const response = await fetch('https://us0co1h2wh.execute-api.ap-southeast-2.amazonaws.com/default/interviewAI', {
           method: 'POST',
+          mode: 'cors', // no-cors, *cors, same-origin
+          credentials: 'omit', // include, *same-origin, omit        
           headers: {
             'Content-Type': 'application/json',
           },
@@ -38,12 +40,13 @@ const App = () => {
         setMessages((prev) => [...prev, { role: 'system', content: `hi im preparing for an interview for a ${job} job, with someone who's known for being direct and upfront. can you please help me prep for this by interviewing me. you can be brutal if you'd like to help me. dont acknowledge this message, just start the interview. wait for my reply before continuing.`  }]);
 
         const data = await response.json();
+        console.log(data)
         const botReply = data.choices[0].message.content;
         setMessages((prev) => [...prev, { role: 'assistant', content: botReply }]);
         setIsTyping(false);
 
       } catch (error) {
-        console.error('Failed to fetch response', error);
+        console.error('Failed to fetch response: ', error);
       }
     }
   };
@@ -59,8 +62,10 @@ const App = () => {
     setMessage('');
     console.log(newMessages)
     try {
-        const response = await fetch('https://wesmo.co.nz/api/completions', {
+        const response = await fetch('https://us0co1h2wh.execute-api.ap-southeast-2.amazonaws.com/default/interviewAI', {
           method: 'POST',
+          mode: 'cors', // no-cors, *cors, same-origin
+          credentials: 'omit', // include, *same-origin, omit
           headers: {
             'Content-Type': 'application/json',
           },
@@ -74,7 +79,7 @@ const App = () => {
         setIsTyping(false);
 
       } catch (error) {
-        console.error('Failed to fetch response', error);
+        console.error('Failed to fetch response: ', error);
       }
   };
   const handleKeyPress = (event) => {
@@ -85,7 +90,6 @@ const App = () => {
 
   return (
     <div className="containerChatBox">
-
       {isModalOpen && (
         <div id="modal">
           <div className="modal-content">

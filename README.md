@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# InterviewAI.site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+InterviewAI.site is an innovative platform designed to help individuals prepare for job interviews 
+through the power of artificial intelligence. Originating from a startup idea, the site leverages GPT 
+API to simulate interview scenarios, allowing users to practice and improve their interview skills. 
+Recognizing the improvement in performance after initial interview experiences, InterviewAI.site aims 
+to offer users the opportunity to gain preliminary practice and enhance their confidence without the 
+risk of missing out on real opportunities.
 
-## Available Scripts
+Initially built with AWS Lambda and EC2 for backend processing, InterviewAI.site has since migrated to 
+Google Functions (as this is where all of my projects are now). The front-end is developed using 
+React, providing a responsive and user-friendly interface, while hosting is managed through Firebase, 
+ensuring a secure and reliable access to the platform.
 
-In the project directory, you can run:
+## Technologies Used
+- **React**: For building a dynamic and responsive front-end.
+- **Google Functions**: Handles backend logic.
+- **Firebase**: Used for hosting the website and managing backend services.
+- **GPT API**: Powers the AI-driven interview simulations, offering realistic and varied practice 
+scenarios.
 
-### `npm start`
+## Features
+- **AI-driven Interview Practice**: Engage in simulated interviews to prepare for real-life scenarios.
+- **Accessible Anywhere, Instantly**: Practice interviews at your convenience, with no risk of 
+jeopardizing actual job opportunities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
+- Node.js
+- npm or yarn
 
-### `npm test`
+### Setup
+To run InterviewAI.site locally:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/interviewai.site.git
+cd interviewai.site
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

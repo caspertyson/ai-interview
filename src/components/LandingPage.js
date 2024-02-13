@@ -16,10 +16,12 @@ const App = ({ onClickStart }) => {
                     </div>
                     <div id='appName'>InterviewAI.Site</div>
                 </div>
-                <div id='poweredByAI'>Powered By AI</div>
-                <h1>Your <span id='interviewer'>Interviewer</span> Will Not Be This <span id='direct'>Direct</span></h1>
-                <p id='landingPageP'>Unprepared for your interview? Get ready with this application. No sign-in required.</p>
-                <button onClick={onClickStart}>Start Interview!</button>
+                <div id='landingPageMainContent'>
+                    <div id='poweredByAI'>Powered By AI</div>
+                    <h1>Your <span id='interviewer'>Interviewer</span> Will Not Be This <span id='direct'>Direct</span></h1>
+                    <p id='landingPageP'>Unprepared for your interview? Get ready with this application. No sign-in required.</p>
+                    <button onClick={onClickStart}>Start Interview!</button>
+                </div>
             </div>
             <div id='tilesContainer'>
                 <div className='tileRow'>
@@ -87,15 +89,15 @@ const App = ({ onClickStart }) => {
                 <div className="row">
                 <div className="sub-section">
                 <h2>Jobs available</h2>
-                    <p>Software Engineer</p>
-                    <p>Accountant</p>
-                    <p>Doctor</p>
-                    <p>Bartender</p>
-                    <p>Cashier</p>
-                    <p>Hairdresser</p>
-                    <p>Lawyer</p>
-                    <p>Start-up founder</p>
-                    <p>Chef</p>
+                    <p onClick={onClickStart}>Software Engineer</p>
+                    <p onClick={onClickStart}>Accountant</p>
+                    <p onClick={onClickStart}>Doctor</p>
+                    <p onClick={onClickStart}>Bartender</p>
+                    <p onClick={onClickStart}>Cashier</p>
+                    <p onClick={onClickStart}>Hairdresser</p>
+                    <p onClick={onClickStart}>Lawyer</p>
+                    <p onClick={onClickStart}>Start-up founder</p>
+                    <p onClick={onClickStart}>Chef</p>
                     <p onClick={onClickStart}>Many More...</p>
                 </div>
                 </div>

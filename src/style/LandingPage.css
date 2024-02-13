@@ -120,7 +120,14 @@ body, html{
 }
 #fullPage{
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 } 
+#landingPageMainContent{
+    margin-top: auto;
+    margin-bottom: 100px;
+}
 .tileRow{
     display: flex;
     flex-direction: row;
